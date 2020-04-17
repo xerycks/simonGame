@@ -5,19 +5,32 @@ var level = 0;
 
 var colors = ["green", "red", "yellow", "blue"]
 
+$(".htp").hide();
+
+$(".btn-d").click(function () {
+    $(".htp").slideToggle();
+});
+
 $(".start").click(function (e) {
     if (started === false) {
         levelIncrease();
         started = true;
+        $(".start").text("RESTART");
     }
 });
+
+
+
 $(".btn").click(function () {
     var ids = $(this).attr("id");
     userClickedPattern.push(ids);
     var audio = new Audio("./sounds/" + ids + ".mp3")
     audio.play();
     animateButton(ids);
-    checkAnswer(userClickedPattern.length - 1);
+    if (started === true) {
+        checkAnswer(userClickedPattern.length - 1);
+    }
+
 });
 
 function checkAnswer(currentLevel) {
@@ -33,7 +46,7 @@ function checkAnswer(currentLevel) {
         var audio2 = new Audio("./sounds/wrong.mp3");
         audio2.play();
         console.log("wrong")
-        $("#level").text("Game Over !! Press any key to start again");
+        $("#level").text("Game Over !! Press RESTART to start again.");
         $("body").addClass("game-over");
         setTimeout(function () {
             $("body").toggleClass("game-over");

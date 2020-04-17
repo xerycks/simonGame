@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Iceland&display=swap');
+
+
 body {
     text-align: center;
     background-color: #011F3F;
@@ -5,9 +9,10 @@ body {
 
 #level {
     font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
-    margin: 5%;
+    font-size: 2rem;
+    margin: 1% 5%;
     color: #FEF2BF;
+    line-height: 1.6;
 }
 
 .container {
@@ -60,5 +65,33 @@ body {
     margin: auto;
     height: 60px;
     border-radius: 30px;
+    font-size: 1rem;
+    margin-top: 50px;
+}
+
+.btn-d {
+    color: #FEF2BF;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ff4c68;
+    width: 250px;
+    margin: auto;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 1rem;
+    margin-top: 50px;
+}
+
+.footer {
+    font-family: 'Marck Script', cursive;
+    color: aqua;
+    font-size: 1.3rem;
+    padding: 40px;
+}
+
+.htp {
+    color: aquamarine;
+    line-height: 1.5;
     font-size: 2rem;
+    font-family: 'Iceland', cursive;
+
 }
